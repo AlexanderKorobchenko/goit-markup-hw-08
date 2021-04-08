@@ -1,0 +1,25 @@
+.contact {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+
+  &__item_tel {
+    margin-left: 50px;
+  }
+  &__link {
+    display: flex;
+    align-items: center;
+    @include font(500, 14px, 1.14, 0.02em);
+    color: var(--main-color-text);
+  }
+  &__icon {
+    margin-right: 10px;
+    fill: var(--main-color-text);
+    transition: fill var(--delay-time) var(--time-function);
+
+    .contact__link:hover &,
+    .contact__link:focus & {
+      fill: var(--blue-color);
+    }
+  }
+}

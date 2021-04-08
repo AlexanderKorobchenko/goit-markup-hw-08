@@ -1,0 +1,27 @@
+.features-list {
+  display: flex;
+
+  &__item {
+    width: 270px;
+
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+  &__box {
+    height: 120px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    background-color: var(--backgraund-section);
+  }
+  &__icon {
+    fill: var(--color-title);
+  }
+  &__text {
+    margin-top: 10px;
+    @include font();
+  }
+}

@@ -1,0 +1,14 @@
+.footer {
+  min-width: 1200px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background: var(--background-footer);
+
+  &__box-social {
+    margin-left: 70px;
+  }
+
+  &__box-subscribe {
+    margin-left: auto;
+  }
+}
