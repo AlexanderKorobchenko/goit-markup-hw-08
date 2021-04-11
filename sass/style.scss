@@ -321,3 +321,112 @@ img {
     }
   }
 }
+// ------- end ----------
+
+// === buton ===
+.button {
+  min-width: 200px;
+  padding: 10px;
+  align-self: center;
+  border: none;
+  border-radius: 4px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  @include font(700, 16px, 1.87, 0.06em);
+  color: var(--white-text);
+  background: var(--blue-color);
+  cursor: pointer;
+  transition: background var(--delay-time) var(--time-function);
+
+  &:hover,
+  &:focus {
+    background: var(--button-hover);
+  }
+
+  &_hero {
+    display: block;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &_subscribe {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 12px;
+  }
+
+  &__icon {
+    margin-left: 10px;
+    fill: var(--white-text);
+  }
+}
+
+// === hero ===
+// --------- для мобилки
+@media screen and (max-width: 767px) {
+  .hero {
+    max-width: 480px;
+    min-height: 400px;
+    margin: 0 auto;
+    padding-top: 118px;
+    background-color: var(--background-footer);
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url("../images/mobile/hero/background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  
+    &__titel {
+      @include font(900, 26px, 1.62, 0.06em);
+      text-align: center;
+      text-transform: uppercase;
+      color: var(--white-text);
+    }
+  }
+}
+// ----------для планшета
+@media screen and (min-width: 768px) {
+  .hero {
+    width: 768px;
+    min-height: 400px;
+    margin: 0 auto;
+    padding-top: 118px;
+    background-color: var(--background-footer);
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url("../images/tablet/hero/background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  
+    &__titel {
+      @include font(900, 26px, 1.62, 0.06em);
+      text-align: center;
+      text-transform: uppercase;
+      color: var(--white-text);
+    }
+  }
+}
+// -------- для компа
+@media screen and (min-width: 1200px) {
+  .hero {
+    width: auto;
+    max-width: 1600px;
+    min-height: 600px;
+    padding-top: 200px;
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url("../images/desktop/hero/background.jpg");
+      
+    &__titel {
+      @include font(900, 44px, 1.36, 0.06em);
+    }
+  }
+}
+// --------- end -----------
