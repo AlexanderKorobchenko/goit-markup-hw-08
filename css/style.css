@@ -671,7 +671,7 @@ img {
 @media screen and (min-width: 768px) {
   .team {
     padding-top: 60px;
-    padding-bottom: 94px;
+    padding-bottom: 60px;
   }
 }
 
@@ -793,5 +793,233 @@ img {
 
 .social__icon_dark {
   fill: var(--white-text);
+}
+
+@media screen and (max-width: 767px) {
+  .clients {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .clients {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .clients {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+}
+
+.clients-list__item {
+  margin-left: 30px;
+  margin-top: 30px;
+}
+
+.clients-list__link {
+  height: 90px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--svg-links);
+  border-radius: 4px;
+  transition: border-color var(--delay-time) var(--time-function);
+}
+
+.clients-list__link:hover, .clients-list__link:focus {
+  border-color: var(--blue-color);
+}
+
+.clients-list__icon {
+  fill: var(--svg-links);
+  transition: fill var(--delay-time) var(--time-function);
+}
+
+.clients-list__link:hover .clients-list__icon,
+.clients-list__link:focus .clients-list__icon {
+  fill: var(--blue-color);
+}
+
+@media screen and (max-width: 767px) {
+  .clients-list__item {
+    max-width: 210px;
+    flex-basis: calc(100% / 2 - 30px);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .clients-list__item {
+    width: 226px;
+    flex-basis: calc(100% / 3 - 30px);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .clients-list__item {
+    width: 170px;
+    flex-basis: calc(100% / 6 - 30px);
+  }
+}
+
+.footer {
+  width: 100%;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background: var(--background-footer);
+}
+
+.footer__container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+@media screen and (max-width: 767px) {
+  .footer__container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .footer__box {
+    margin-bottom: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer__box-social {
+    margin-bottom: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer__box-subscribe {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .footer__container {
+    justify-content: center;
+  }
+  .footer__box {
+    margin-right: 165px;
+    margin-bottom: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer__box-social {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer__box-subscribe {
+    width: 450px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer .footer__box {
+    margin-right: 70px;
+    margin-bottom: 0;
+    align-items: flex-start;
+  }
+  .footer__box-social {
+    align-items: flex-start;
+  }
+  .footer__box-subscribe {
+    width: auto;
+    margin-left: auto;
+    align-items: flex-start;
+  }
+}
+
+.address {
+  font-style: normal;
+  display: flex;
+  flex-direction: column;
+}
+
+.address__maps {
+  margin-bottom: 10px;
+  color: var(--white-text);
+}
+
+.address__mail {
+  margin-bottom: 10px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.address__tel {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+@media screen and (max-width: 1199px) {
+  .address {
+    align-items: center;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .address {
+    margin-bottom: 0;
+    align-items: flex-start;
+  }
+}
+
+.subscribe-form {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.subscribe-form__email {
+  height: 50px;
+  padding: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  outline: none;
+  color: var(--white-text);
+  background-color: transparent;
+  transition: border-color var(--delay-time) var(--time-function);
+}
+
+.subscribe-form__email::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.subscribe-form__email:focus {
+  border-color: var(--blue-color);
+}
+
+@media screen and (max-width: 1199px) {
+  .subscribe-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .subscribe-form__email {
+    max-width: 450px;
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .subscribe-form__email {
+    width: 358px;
+  }
 }
 /*# sourceMappingURL=style.css.map */
