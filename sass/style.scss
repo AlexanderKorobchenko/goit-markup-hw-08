@@ -79,10 +79,7 @@ img {
   display: flex;
   align-items: center;
 }
-.footer__container {
-  display: flex;
-  align-items: baseline;
-}
+
 @media screen and (min-width: 480px) {
   .container {
     width: 480px;
@@ -140,9 +137,10 @@ img {
 }
 //  === mobile menu ===
 .mobile-menu {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
+  z-index: 999;
   transform: scale(0);
   transition: transform var(--delay-time) var(--time-function);
 }
@@ -948,7 +946,6 @@ img {
   margin-top: 20px;
 
   &__email {
-    // width: 358px;
     height: 50px;
     padding: 16px;
     border: 1px solid rgba(255, 255, 255, 0.3);
@@ -982,5 +979,351 @@ img {
 @media screen and (min-width: 1200px) {
   .subscribe-form__email {
     width: 358px;
+  }
+}
+// === End ===
+
+// ======== Portfolio =======
+// === projects ===
+@media screen and (max-width: 1199px) {
+  .projects {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background: var(--background-page);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .projects {
+    padding-top: 94px;
+    padding-bottom: 94px;
+    background: var(--background-page);
+  }
+}
+// === button filter ===
+.buttons-filter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.buttons-filter__item {
+  margin-bottom: 15px;
+
+  &:not(:last-child) {
+    margin-right: 8px;
+  }
+}
+
+.buttons-filter__button {
+  padding: 6px 22px;
+  @include font(500, 16px, 1.62, 0.03em);
+  text-align: center;
+  color: var(--color-title);
+  background: var(--backgraund-section);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background var(--delay-time) var(--time-function),
+    color var(--delay-time) var(--time-function),
+    box-shadow var(--delay-time) var(--time-function);
+
+  &:hover,
+  &:focus {
+    background: var(--blue-color);
+    color: var(--white-text);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+      0px 2px 2px rgba(0, 0, 0, 0.12);
+  }
+}
+@media screen and (max-width: 767px) {
+  .buttons-filter {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 40px;
+  }
+}
+// === projects-list ===
+.projects-list {
+  margin-top: -30px;
+  margin-left: -30px;
+  display: flex;
+  flex-wrap: wrap;
+
+  &__item {
+    margin-left: 30px;
+    margin-top: 30px;
+  }
+  &__link {
+    display: block;
+    transition: box-shadow var(--delay-time) var(--time-function);
+
+    &:hover,
+    &:focus {
+      box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
+        0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+    }
+  }
+  &__box-img {
+    position: relative;
+    overflow: hidden;
+  }
+  &__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: rgba(33, 150, 243, 0.9);
+    color: var(--white-text);
+    @include font(400, 18px, 1.56, 0.03em);
+    padding: 63px 24px;
+    overflow: auto;
+    transform: translateY(101%);
+    transition: transform var(--delay-time) var(--time-function);
+
+    .projects-list__link:hover &,
+    .projects-list__link:focus & {
+      transform: translateY(0%);
+    }
+  }
+  &__box-wrapper {
+    padding: 20px 24px;
+    border-left: 1px solid #eeeeee;
+    border-right: 1px solid #eeeeee;
+    border-bottom: 1px solid #eeeeee;
+  }
+  &__subtitle {
+    @include font(700, 18px, 2, 0.06em);
+    color: var(--color-title);
+  }
+  &__text {
+    margin-top: 4px;
+    @include font(400, 16px, 1.87, 0.03em);
+    color: var(--main-color-text);
+  }
+}
+@media screen and (max-width: 767px) {
+  .projects-list__item {
+    flex-basis: calc(100% / 1 - 30px);
+  }
+}
+@media screen and (min-width: 768px) {
+  .projects-list__item {
+    flex-basis: calc(100% / 2 - 30px);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .projects-list__item {
+    flex-basis: calc(100% / 3 - 30px);
+  }
+}
+// === END ===
+
+//  ======= modal ++========
+// --backdrop
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.2);
+  transform: scale(1);
+  transition: transform var(--delay-time) var(--time-function);
+}
+@media screen and (max-width: 479px) {
+  .backdrop {
+    position: absolute;
+  }
+}
+// --modal
+.modal {
+  position: absolute;
+
+  padding: 40px;
+  background-color: var(--background-page);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+
+  &__close-btn {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    background: transparent;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: fill var(--delay-time) var(--time-function);
+
+    &:hover,
+    &:focus {
+      fill: var(--blue-color);
+    }
+  }
+  &__title {
+    margin-bottom: 12px;
+    @include font(700, 20px, 1.15, 0.03em);
+    text-align: center;
+    color: var(--color-title);
+  }
+}
+@media screen and (max-width: 479px) {
+  .modal {
+    top: 0;
+    left: 0;
+  }
+}
+@media screen and (min-width: 480px) {
+  .modal {
+    width: 450px;
+    height: 609px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .modal {
+    width: 528px;
+    height: 580px;
+  }
+}
+
+.is-hidden {
+  transform: scale(0);
+}
+
+// --- modal-form
+.modal-form {
+  display: flex;
+  flex-direction: column;
+
+  &__fild {
+    margin-bottom: 4px;
+    @include font(400, 12px, 1.67, 0.01em);
+  }
+  &__wrapper {
+    position: relative;
+    margin-bottom: 10px;
+  }
+  &__input {
+    width: 100%;
+    height: 40px;
+    padding-left: 42px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    box-sizing: border-box;
+    border-radius: 4px;
+    transition: border-color var(--delay-time) var(--time-function);
+
+    &:hover,
+    &:focus {
+      outline: none;
+      border-color: var(--blue-color);
+    }
+  }
+  &__icon {
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    transform: translateY(-50%);
+    pointer-events: none;
+    fill: var(--color-title);
+    transition: fill var(--delay-time) var(--time-function);
+
+    .modal-form__input:hover + &,
+    .modal-form__input:focus + & {
+      fill: var(--blue-color);
+    }
+  }
+  &__texteria {
+    width: 100%;
+    height: 120px;
+    margin-bottom: 20px;
+    padding: 12px 16px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    box-sizing: border-box;
+    border-radius: 4px;
+    resize: none;
+    transition: border-color var(--delay-time) var(--time-function);
+
+    &::placeholder {
+      color: rgba(117, 117, 117, 0.5);
+    }
+    &:hover,
+    &:focus {
+      outline: none;
+      border-color: var(--blue-color);
+    }
+  }
+  &__check-desk {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+
+    &::before {
+      content: "";
+      display: block;
+      width: 16px;
+      height: 16px;
+      margin-right: 7px;
+      border: 1px solid var(--color-title);
+      border-radius: 2px;
+      transition: border-color var(--delay-time) var(--time-function);
+
+      .modal-form__check-box:checked + & {
+        background-color: var(--blue-color);
+        background-image: url(../images/svg/checkbox.svg);
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        border: none;
+        cursor: pointer;
+      }
+      .modal-form__check-box:focus + &,
+      .modal-form__check-box:hover + & {
+        border: 2px solid var(--blue-color);
+        cursor: pointer;
+      }
+    }
+  }
+  &__check-link {
+    color: var(--blue-color);
+  }
+}
+@media screen and (max-width: 1199px) {
+  .modal-form__check-desk,
+  .modal-form__check-link {
+    @include font(400, 12px, 1.67, 0.03em);
+  }
+}
+
+//  === Current ===
+.current_mobile-menu {
+  color: var(--blue-color);
+}
+
+.navigation-menu__item {
+  position: relative;
+}
+
+.current {
+  color: var(--blue-color);
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -1px;
+    width: 100%;
+    height: 4px;
+    background-color: var(--blue-color);
+    border-radius: 2px;
   }
 }
