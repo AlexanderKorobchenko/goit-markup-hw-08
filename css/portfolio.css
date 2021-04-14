@@ -519,11 +519,17 @@ img {
   .projects-list__item {
     flex-basis: calc(100% / 2 - 30px);
   }
+  .projects-list__item:first-child .projects-list__box-wrapper {
+    height: 146px;
+  }
 }
 
 @media screen and (min-width: 1200px) {
   .projects-list__item {
     flex-basis: calc(100% / 3 - 30px);
+  }
+  .projects-list__item:first-child .projects-list__box-wrapper {
+    height: auto;
   }
 }
 
@@ -636,6 +642,19 @@ img {
     margin-bottom: 0;
     align-items: flex-start;
   }
+}
+
+.subtitle {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--color-title);
+}
+
+.footer__subtitle {
+  color: var(--white-text);
 }
 
 .social {

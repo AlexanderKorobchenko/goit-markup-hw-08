@@ -372,8 +372,9 @@ img {
 
 @media screen and (max-width: 767px) {
   .hero {
-    max-width: 480px;
-    min-height: 400px;
+    width: auto;
+    max-width: 767px;
+    height: 400px;
     margin: 0 auto;
     padding-top: 118px;
     background-color: var(--background-footer);
@@ -381,6 +382,15 @@ img {
     background-repeat: no-repeat;
     background-size: cover;
   }
+}
+
+@media screen and (max-width: 767px) and (min-device-pixel-ratio: 2), screen and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), screen and (max-width: 767px) and (min-resolution: 192dpi), screen and (max-width: 767px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: url("../images/mobile/hero/background@2x.jpg");
+  }
+}
+
+@media screen and (max-width: 767px) {
   .hero__titel {
     font-weight: 900;
     font-size: 26px;
@@ -394,8 +404,9 @@ img {
 
 @media screen and (min-width: 768px) {
   .hero {
-    width: 768px;
-    min-height: 400px;
+    width: auto;
+    max-width: 1199px;
+    height: 400px;
     margin: 0 auto;
     padding-top: 118px;
     background-color: var(--background-footer);
@@ -403,6 +414,15 @@ img {
     background-repeat: no-repeat;
     background-size: cover;
   }
+}
+
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: url("../images/tablet/hero/background@2x.jpg");
+  }
+}
+
+@media screen and (min-width: 768px) {
   .hero__titel {
     font-weight: 900;
     font-size: 26px;
@@ -418,10 +438,19 @@ img {
   .hero {
     width: auto;
     max-width: 1600px;
-    min-height: 600px;
+    height: 600px;
     padding-top: 200px;
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/desktop/hero/background.jpg");
   }
+}
+
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: url("../images/desktop/hero/background@2x.jpg");
+  }
+}
+
+@media screen and (min-width: 1200px) {
   .hero__titel {
     font-weight: 900;
     font-size: 44px;

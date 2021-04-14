@@ -1,8 +1,9 @@
 // mobile
 @media screen and (max-width: 767px) {
   .hero {
-    max-width: 480px;
-    min-height: 400px;
+    width: auto;
+    max-width: 767px;
+    height: 400px;
     margin: 0 auto;
     padding-top: 118px;
     background-color: var(--background-footer);
@@ -13,6 +14,13 @@
       url("../images/mobile/hero/background.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+
+    @media (min-device-pixel-ratio: 2),
+      (-webkit-min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url("../images/mobile/hero/background@2x.jpg");
+    }
 
     &__titel {
       @include font(900, 26px, 1.62, 0.06em);
@@ -25,8 +33,9 @@
 // tablet
 @media screen and (min-width: 768px) {
   .hero {
-    width: 768px;
-    min-height: 400px;
+    width: auto;
+    max-width: 1199px;
+    height: 400px;
     margin: 0 auto;
     padding-top: 118px;
     background-color: var(--background-footer);
@@ -37,6 +46,13 @@
       url("../images/tablet/hero/background.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+
+    @media (min-device-pixel-ratio: 2),
+      (-webkit-min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url("../images/tablet/hero/background@2x.jpg");
+    }
 
     &__titel {
       @include font(900, 26px, 1.62, 0.06em);
@@ -51,13 +67,20 @@
   .hero {
     width: auto;
     max-width: 1600px;
-    min-height: 600px;
+    height: 600px;
     padding-top: 200px;
     background-image: linear-gradient(
         rgba(47, 48, 58, 0.4),
         rgba(47, 48, 58, 0.4)
       ),
       url("../images/desktop/hero/background.jpg");
+
+    @media (min-device-pixel-ratio: 2),
+      (-webkit-min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url("../images/desktop/hero/background@2x.jpg");
+    }
 
     &__titel {
       @include font(900, 44px, 1.36, 0.06em);

@@ -71,10 +71,16 @@
   .projects-list__item {
     flex-basis: calc(100% / 2 - 30px);
   }
+  .projects-list__item:first-child .projects-list__box-wrapper {
+    height: 146px;
+  }
 }
 // desktop
 @media screen and (min-width: 1200px) {
   .projects-list__item {
     flex-basis: calc(100% / 3 - 30px);
+  }
+  .projects-list__item:first-child .projects-list__box-wrapper {
+    height: auto;
   }
 }
