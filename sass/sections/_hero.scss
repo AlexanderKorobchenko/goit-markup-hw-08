@@ -19,7 +19,11 @@
       (-webkit-min-device-pixel-ratio: 2),
       (min-resolution: 192dpi),
       (min-resolution: 2dppx) {
-      background-image: url("../images/mobile/hero/background@2x.jpg");
+      background-image: linear-gradient(
+          rgba(47, 48, 58, 0.4),
+          rgba(47, 48, 58, 0.4)
+        ),
+        url("../images/mobile/hero/background@2x.jpg");
     }
 
     &__titel {
@@ -51,7 +55,11 @@
       (-webkit-min-device-pixel-ratio: 2),
       (min-resolution: 192dpi),
       (min-resolution: 2dppx) {
-      background-image: url("../images/tablet/hero/background@2x.jpg");
+      background-image: linear-gradient(
+          rgba(47, 48, 58, 0.4),
+          rgba(47, 48, 58, 0.4)
+        ),
+        url("../images/tablet/hero/background@2x.jpg");
     }
 
     &__titel {
@@ -79,7 +87,11 @@
       (-webkit-min-device-pixel-ratio: 2),
       (min-resolution: 192dpi),
       (min-resolution: 2dppx) {
-      background-image: url("../images/desktop/hero/background@2x.jpg");
+      background-image: linear-gradient(
+          rgba(47, 48, 58, 0.4),
+          rgba(47, 48, 58, 0.4)
+        ),
+        url("../images/desktop/hero/background@2x.jpg");
     }
 
     &__titel {
