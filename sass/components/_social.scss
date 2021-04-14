@@ -3,7 +3,6 @@
   margin-top: 16px;
   display: flex;
   justify-content: space-between;
-  align-items: center;
 
   &__link {
     display: flex;
@@ -21,8 +20,6 @@
     }
   }
   &__icon {
-    width: 20px;
-    height: 20px;
     fill: var(--svg-links);
     transition: fill var(--delay-time) var(--time-function);
 

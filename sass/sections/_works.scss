@@ -1,3 +1,13 @@
-.works {
-  padding-bottom: 94px;
+// mobile, tablet
+@media screen and (max-width: 1199px) {
+  .works {
+    display: none;
+  }
+}
+// desktop
+@media screen and (min-width: 1200px) {
+  .works {
+    display: block;
+    padding-bottom: 94px;
+  }
 }

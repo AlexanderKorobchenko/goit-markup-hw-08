@@ -1,5 +1,16 @@
-.projects {
-  padding-top: 94px;
-  padding-bottom: 94px;
-  background: var(--background-page);
+// mobile, tablet
+@media screen and (max-width: 1199px) {
+  .projects {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background: var(--background-page);
+  }
+}
+// mobile
+@media screen and (min-width: 1200px) {
+  .projects {
+    padding-top: 94px;
+    padding-bottom: 94px;
+    background: var(--background-page);
+  }
 }

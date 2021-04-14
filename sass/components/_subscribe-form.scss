@@ -4,7 +4,6 @@
   margin-top: 20px;
 
   &__email {
-    width: 358px;
     height: 50px;
     padding: 16px;
     border: 1px solid rgba(255, 255, 255, 0.3);
@@ -21,5 +20,24 @@
     &:focus {
       border-color: var(--blue-color);
     }
+  }
+}
+// mobile, tablet
+@media screen and (max-width: 1199px) {
+  .subscribe-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .subscribe-form__email {
+    max-width: 450px;
+    margin-bottom: 20px;
+  }
+}
+// desktop
+@media screen and (min-width: 1200px) {
+  .subscribe-form__email {
+    width: 358px;
   }
 }

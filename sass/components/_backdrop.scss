@@ -8,3 +8,8 @@
   transform: scale(1);
   transition: transform var(--delay-time) var(--time-function);
 }
+@media screen and (max-width: 479px) {
+  .backdrop {
+    position: absolute;
+  }
+}

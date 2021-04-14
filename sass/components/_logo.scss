@@ -5,7 +5,6 @@
   text-decoration: none;
 
   &_header {
-    margin-right: 93px;
     color: #000000;
   }
   &_footer {
@@ -15,5 +14,10 @@
   }
   &__web {
     color: var(--blue-color);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .logo {
+    @include font(700, 26px, 1.19, 0.03em);
   }
 }

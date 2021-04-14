@@ -1,3 +1,7 @@
+.works-list__img {
+  max-width: 100%;
+  height: auto;
+}
 .works-list__item {
   flex-basis: calc(100% / 3 - 30px);
   margin-left: 30px;

@@ -93,3 +93,10 @@
     color: var(--blue-color);
   }
 }
+// mobile, tablet
+@media screen and (max-width: 1199px) {
+  .modal-form__check-desk,
+  .modal-form__check-link {
+    @include font(400, 12px, 1.67, 0.03em);
+  }
+}
